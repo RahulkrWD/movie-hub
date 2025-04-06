@@ -32,7 +32,13 @@ function home() {
         >
           <img src={movie.Poster} alt={movie.Title} />
           <h5 className="p-2">{movie.Title}</h5>
-          <span>{movie.Year}</span>
+          <p>{movie.Year}</p>
+          <Link
+            to={`/favorites/${movie.Title}`}
+            className="btn text-bg-primary"
+          >
+            Add to Watchlist
+          </Link>
         </Link>
       ))}
     </div>

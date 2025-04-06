@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
 
 function Layout({ children }) {
   const [theme, setTheme] = useState(() => {
@@ -19,7 +18,6 @@ function Layout({ children }) {
     <>
       <Navbar button={toggleButton} theme={theme} />
       <main className={theme ? "Dark-mode" : ""}>{children}</main>
-      <Footer />
     </>
   );
 }

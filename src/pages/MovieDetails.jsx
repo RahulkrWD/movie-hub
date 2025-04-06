@@ -19,7 +19,7 @@ function MovieDetails() {
   useEffect(() => {
     getMovieDetails();
   }, []);
-  if (!movie) return <div>Loding..</div>;
+  if (!movie) return <h3 className="text-center">Loding..</h3>;
   return (
     <div className="movie-details-container">
       <img className="movie-poster" src={movie.Poster} alt={movie.Title} />
